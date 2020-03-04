@@ -1,15 +1,16 @@
+### all breweries grouped by states
 GET http://localhost:3000/states
 Accept: application/json
 
-###
+### get breweries located to specific state
 GET http://localhost:3000/states/alaska
 Accept: application/json
 
-###
+### base url, do nothing
 GET http://localhost:3000/
 Accept: application/json
 
-###
+### get table of breweries exclude specific type, [type = micro] by default
 http://localhost:3000/exclude-type
 Accept: application/json
 
