@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    .container
+        ul.list-group.list-group-flush
+            for brewery in breweries
+                li.list-group-item.state= Object.keys(brewery)[0]
+                ul
+                    for brew in brewery[Object.keys(brewery)]
+                        - var address = brew.getFullAddress();
+                        - var result = `${brew.name}: ${address.postal_code}, ${address.country}, ${address.state}, ${address.city}, ${address.street}.`
+                        li.list-group-item= result

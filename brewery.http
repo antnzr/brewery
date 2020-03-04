@@ -1,0 +1,16 @@
+GET http://localhost:3000/states
+Accept: application/json
+
+###
+GET http://localhost:3000/states/alaska
+Accept: application/json
+
+###
+GET http://localhost:3000/
+Accept: application/json
+
+###
+http://localhost:3000/exclude-type
+Accept: application/json
+
+###

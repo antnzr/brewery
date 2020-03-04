@@ -1,0 +1,22 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.state {
+    text-transform: capitalize;
+}
+
+/*.table {*/
+/*    table-layout: fixed*/
+/*}*/
+
+th td {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

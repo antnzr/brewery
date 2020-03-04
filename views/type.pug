@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    .container-fluid
+        table.table
+            tr.d-flex
+                th.col-sm-1 Id
+                th.col-sm-3 Name
+                th.col-sm-4 Address
+                th.col-sm-2 Phone
+                th.col-sm-2 Website
+            tbody
+                for brewery in breweries
+                    - var address = brewery.getFullAddress();
+                    - var formatAddress = `${address.postal_code}, ${address.country}, ${address.state}, ${address.city}, ${address.street}.`
+                    tr.d-flex
+                        td.col-sm-1 #{brewery.id}
+                        td.col-sm-3 #{brewery.name}
+                        td.col-sm-4 #{formatAddress}
+                        td.col-sm-2 #{brewery.phone}
+                        td.col-sm-2 #{brewery.website_url}
